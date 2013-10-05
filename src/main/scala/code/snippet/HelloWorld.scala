@@ -9,7 +9,6 @@ import Helpers._
 
 class HelloWorld {
 
-  // replace the contents of the element with id "time" with the date
   def howdy = {
 	var binding = ".header_h2 *" #> "Hello world. The header is rewritten here."
 	binding &= "#time *" #> (new Date).toString
