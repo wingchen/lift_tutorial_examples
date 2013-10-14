@@ -10,17 +10,17 @@ import Helpers._
 class HelloWorld {
 
   def howdy = {
-	var binding = ".header_h2 *" #> "Hello world. The header is rewritten here."
-	binding &= "#time *" #> (new Date).toString
-	binding
+    var binding = ".header_h2 *" #> "Hello world. The header is rewritten here."
+    binding &= "#time *" #> (new Date).toString
+    binding
   }
 
   def iteration = {
-	val listItems = List("This", "Is", "A", "Simple", "HTML", "Iteration", "Example")
-	".iteration_container *" #> ((ns: NodeSeq) => listItems.flatMap( item =>{
-		val result = ".single_item *" #> item
-		result(ns)
-	}))
+    val listItems = List("This", "Is", "A", "Simple", "HTML", "Iteration", "Example")
+    ".iteration_container *" #> ((ns: NodeSeq) => listItems.flatMap( item =>{
+      val result = ".single_item *" #> item
+      result(ns)
+    }))
   }
 
 }

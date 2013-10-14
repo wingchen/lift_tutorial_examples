@@ -21,8 +21,9 @@ class Boot {
 
     // Build SiteMap
     val entries = List(
-	  Menu(Loc("Home", List("index"), "Home"))
-	)
+	    Menu(Loc("Home", List("index"), "Home")),
+      Menu(Loc("Regulat Form", List("regular_form"), "Regulat Form"))
+	  )
 
     // set the sitemap.  Note if you don't want access control for
     // each page, just comment this line out.
