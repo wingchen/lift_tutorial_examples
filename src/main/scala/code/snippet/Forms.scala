@@ -5,7 +5,10 @@ import net.liftweb.util._
 import net.liftweb.common._
 import java.util.Date
 import Helpers._
-import net.liftweb.http.{S, SHtml}
+import net.liftweb.http.{js, SHtml, S}
+import net.liftweb.http.js.JsCmds.RedirectTo
+import net.liftweb.http.js.JsCmd
+import js.JsCmds.Noop
 
 class Forms {
 
@@ -25,4 +28,21 @@ class Forms {
 
     bindings
   }
+
+  def ajaxForm = {
+    var username = ""
+    var password = ""
+
+    def process():JsCmd = {
+      S.notice("username","username: " + username)
+      S.notice("password","password: " + password)
+      Noop
+    }
+
+    var bindings = "name=username" #> SHtml.text(username, username = _)
+    bindings &= "name=password" #> (SHtml.password(password, password = _) ++ SHtml.hidden(process))
+
+    bindings
+  }
+
 }

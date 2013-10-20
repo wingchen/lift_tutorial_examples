@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ajax Form</title>
+    <script type="text/JavaScript" src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+</head>
+<body>
+<h1>User Login</h1>
+<div class='lift:Forms.ajaxForm'>
+    <form class="lift:form.ajax">
+        User Name: <input type="text" name="username"/><br/>
+        Password: <input type="password" name="password"/><br/>
+        <input type="submit" value="Submit"/>
+    </form>
+    <div id="values">
+        <p><span class="lift:Msg?id=username"></span></p>
+        <p><span class="lift:Msg?id=password"></span></p>
+    </div>
+</div>
+</body>
+</html>

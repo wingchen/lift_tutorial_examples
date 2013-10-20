@@ -1,6 +1,7 @@
 package bootstrap.liftweb
 
 import net.liftweb._
+import common.Full
 import util._
 import Helpers._
 
@@ -22,7 +23,8 @@ class Boot {
     // Build SiteMap
     val entries = List(
 	    Menu(Loc("Home", List("index"), "Home")),
-      Menu(Loc("Regulat Form", List("regular_form"), "Regulat Form"))
+      Menu(Loc("Regulat Form", List("regular_form"), "Regular Form")),
+      Menu(Loc("Ajax Form", List("ajax_form"), "Ajax Form"))
 	  )
 
     // set the sitemap.  Note if you don't want access control for
