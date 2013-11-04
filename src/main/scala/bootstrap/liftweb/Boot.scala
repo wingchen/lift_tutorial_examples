@@ -24,7 +24,8 @@ class Boot {
     val entries = List(
 	    Menu(Loc("Home", List("index"), "Home")),
       Menu(Loc("Regulat Form", List("regular_form"), "Regular Form")),
-      Menu(Loc("Ajax Form", List("ajax_form"), "Ajax Form"))
+      Menu(Loc("Ajax Form", List("ajax_form"), "Ajax Form")),
+      Menu(Loc("Ajax", List("ajax"), "Ajax"))
 	  )
 
     // set the sitemap.  Note if you don't want access control for

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ajax</title>
+    <script type="text/JavaScript" src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+</head>
+<body>
+
+<h1>change web page dom items from backend</h1>
+<div class='lift:MyAjax.changeDom'>
+    <input name='changeme' type="button" value='Click Me' />
+    <span id='changable'>This is going to be changed.</span>
+</div>
+
+<h1>invocation of javascript function from the backend</h1>
+<div class='lift:MyAjax.triggerJsFunction'>
+    <input name='trigger_js_function' type="button" value='Trigger Alert' />
+</div>
+
+<h1>invocation of backend codes from the web dom item changes</h1>
+<div class='lift:MyAjax.onDomChange'>
+    <input name='type_something' type="text" value='Type Something Here' /> <br/>
+    <span id='typeted'>This is going to be changed.</span>
+</div>
+
+</body>
+</html>
