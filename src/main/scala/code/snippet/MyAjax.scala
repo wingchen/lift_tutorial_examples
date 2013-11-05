@@ -8,6 +8,7 @@ import Helpers._
 import net.liftweb.http.{js, SHtml, S}
 import net.liftweb.http.js.JsCmds.{SetHtml, RedirectTo, Noop}
 import net.liftweb.http.js.{JE, JsCmd}
+import java.util.UUID
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,7 +26,8 @@ class MyAjax {
 
   def onDomChange =
     "name=type_something [onkeydown]" #> SHtml.ajaxInvoke(() => {
-      JE.JsRaw("$('#typeted').html($('[name=type_something]').val())").cmd
+      val uuid = UUID.randomUUID().toString
+      JE.JsRaw("$('#typeted').html($('[name=type_something]').val() + ' UUID: %s')".format(uuid)).cmd
     })
 
 }
