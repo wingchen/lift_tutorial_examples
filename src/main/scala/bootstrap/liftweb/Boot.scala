@@ -25,7 +25,9 @@ class Boot {
 	    Menu(Loc("Home", List("index"), "Home")),
       Menu(Loc("Regulat Form", List("regular_form"), "Regular Form")),
       Menu(Loc("Ajax Form", List("ajax_form"), "Ajax Form")),
-      Menu(Loc("Ajax", List("ajax"), "Ajax"))
+      Menu(Loc("Ajax", List("ajax"), "Ajax")),
+      Menu(Loc("JS 1", List("js1"), "JS 1")),
+      Menu(Loc("JS 2", List("js2"), "JS 2"))
 	  )
 
     // set the sitemap.  Note if you don't want access control for
